@@ -1,0 +1,14 @@
+parameters:
+    database_driver: pdo_mysql
+    database_host: localhost
+    database_port: null
+    database_name: cupon
+    database_user: cupon
+    database_password: planilla
+    mailer_transport: smtp
+    mailer_host: 127.0.0.1
+    mailer_user: null
+    mailer_password: null
+    locale: en
+    secret: c95916bf0c5c94897fa14577a0a99c1cc7357373
+    database_path: null
