@@ -80,6 +80,9 @@ class appDevDebugProjectContainer extends Container
         $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'OfertaBundle', '/home/web/Proyectos/cupon/app/Resources/OfertaBundle/views', '/\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'OfertaBundle', '/home/web/Proyectos/cupon/src/Cupon/OfertaBundle/Resources/views', '/\\.[^.]+\\.twig$/'))), 'twig');
         $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'BackendBundle', '/home/web/Proyectos/cupon/app/Resources/BackendBundle/views', '/\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'BackendBundle', '/home/web/Proyectos/cupon/src/Cupon/BackendBundle/Resources/views', '/\\.[^.]+\\.twig$/'))), 'twig');
         $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'IdeupSimplePaginatorBundle', '/home/web/Proyectos/cupon/app/Resources/IdeupSimplePaginatorBundle/views', '/\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'IdeupSimplePaginatorBundle', '/home/web/Proyectos/cupon/vendor/ideup/simple-paginator-bundle/Ideup/SimplePaginatorBundle/Resources/views', '/\\.[^.]+\\.twig$/'))), 'twig');
+        $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'ContratoBundle', '/home/web/Proyectos/cupon/app/Resources/ContratoBundle/views', '/\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'ContratoBundle', '/home/web/Proyectos/cupon/src/Cupon/ContratoBundle/Resources/views', '/\\.[^.]+\\.twig$/'))), 'twig');
+        $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'TrabajadorBundle', '/home/web/Proyectos/cupon/app/Resources/TrabajadorBundle/views', '/\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'TrabajadorBundle', '/home/web/Proyectos/cupon/src/Cupon/TrabajadorBundle/Resources/views', '/\\.[^.]+\\.twig$/'))), 'twig');
+        $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'ServicioBundle', '/home/web/Proyectos/cupon/app/Resources/ServicioBundle/views', '/\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'ServicioBundle', '/home/web/Proyectos/cupon/src/Cupon/ServicioBundle/Resources/views', '/\\.[^.]+\\.twig$/'))), 'twig');
         $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'WebProfilerBundle', '/home/web/Proyectos/cupon/app/Resources/WebProfilerBundle/views', '/\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'WebProfilerBundle', '/home/web/Proyectos/cupon/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views', '/\\.[^.]+\\.twig$/'))), 'twig');
         $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'SensioDistributionBundle', '/home/web/Proyectos/cupon/app/Resources/SensioDistributionBundle/views', '/\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'SensioDistributionBundle', '/home/web/Proyectos/cupon/vendor/sensio/distribution-bundle/Sensio/Bundle/DistributionBundle/Resources/views', '/\\.[^.]+\\.twig$/'))), 'twig');
         $instance->addResource(new \Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource(array(0 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'SensioGeneratorBundle', '/home/web/Proyectos/cupon/app/Resources/SensioGeneratorBundle/views', '/\\.[^.]+\\.twig$/'), 1 => new \Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource($a, 'SensioGeneratorBundle', '/home/web/Proyectos/cupon/vendor/sensio/generator-bundle/Sensio/Bundle/GeneratorBundle/Resources/views', '/\\.[^.]+\\.twig$/'))), 'twig');
@@ -344,11 +347,11 @@ class appDevDebugProjectContainer extends Container
      * This service is shared.
      * This method always returns the same instance of the service.
      *
-     * @return EntityManager50df4d96c742f_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager A EntityManager50df4d96c742f_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager instance.
+     * @return EntityManager50e3370c4162d_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager A EntityManager50e3370c4162d_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager instance.
      */
     protected function getDoctrine_Orm_DefaultEntityManagerService()
     {
-        require_once '/home/web/Proyectos/cupon/app/cache/dev/jms_diextra/doctrine/EntityManager_50df4d96c742f.php';
+        require_once '/home/web/Proyectos/cupon/app/cache/dev/jms_diextra/doctrine/EntityManager_50e3370c4162d.php';
 
         $a = $this->get('annotation_reader');
 
@@ -361,16 +364,19 @@ class appDevDebugProjectContainer extends Container
         $d = new \Doctrine\Common\Cache\ArrayCache();
         $d->setNamespace('sf2orm_default_0c55e9f90a11bec05b2c921e597902de');
 
-        $e = new \Doctrine\ORM\Mapping\Driver\AnnotationDriver($a, array(0 => '/home/web/Proyectos/cupon/src/Cupon/CiudadBundle/Entity', 1 => '/home/web/Proyectos/cupon/src/Cupon/UsuarioBundle/Entity', 2 => '/home/web/Proyectos/cupon/src/Cupon/TiendaBundle/Entity', 3 => '/home/web/Proyectos/cupon/src/Cupon/OfertaBundle/Entity'));
+        $e = new \Doctrine\ORM\Mapping\Driver\AnnotationDriver($a, array(0 => '/home/web/Proyectos/cupon/src/Cupon/CiudadBundle/Entity', 1 => '/home/web/Proyectos/cupon/src/Cupon/UsuarioBundle/Entity', 2 => '/home/web/Proyectos/cupon/src/Cupon/TiendaBundle/Entity', 3 => '/home/web/Proyectos/cupon/src/Cupon/OfertaBundle/Entity', 4 => '/home/web/Proyectos/cupon/src/Cupon/ContratoBundle/Entity', 5 => '/home/web/Proyectos/cupon/src/Cupon/TrabajadorBundle/Entity', 6 => '/home/web/Proyectos/cupon/src/Cupon/ServicioBundle/Entity'));
 
         $f = new \Doctrine\ORM\Mapping\Driver\DriverChain();
         $f->addDriver($e, 'Cupon\\CiudadBundle\\Entity');
         $f->addDriver($e, 'Cupon\\UsuarioBundle\\Entity');
         $f->addDriver($e, 'Cupon\\TiendaBundle\\Entity');
         $f->addDriver($e, 'Cupon\\OfertaBundle\\Entity');
+        $f->addDriver($e, 'Cupon\\ContratoBundle\\Entity');
+        $f->addDriver($e, 'Cupon\\TrabajadorBundle\\Entity');
+        $f->addDriver($e, 'Cupon\\ServicioBundle\\Entity');
 
         $g = new \Doctrine\ORM\Configuration();
-        $g->setEntityNamespaces(array('CiudadBundle' => 'Cupon\\CiudadBundle\\Entity', 'UsuarioBundle' => 'Cupon\\UsuarioBundle\\Entity', 'TiendaBundle' => 'Cupon\\TiendaBundle\\Entity', 'OfertaBundle' => 'Cupon\\OfertaBundle\\Entity'));
+        $g->setEntityNamespaces(array('CiudadBundle' => 'Cupon\\CiudadBundle\\Entity', 'UsuarioBundle' => 'Cupon\\UsuarioBundle\\Entity', 'TiendaBundle' => 'Cupon\\TiendaBundle\\Entity', 'OfertaBundle' => 'Cupon\\OfertaBundle\\Entity', 'ContratoBundle' => 'Cupon\\ContratoBundle\\Entity', 'TrabajadorBundle' => 'Cupon\\TrabajadorBundle\\Entity', 'ServicioBundle' => 'Cupon\\ServicioBundle\\Entity'));
         $g->setMetadataCacheImpl($b);
         $g->setQueryCacheImpl($c);
         $g->setResultCacheImpl($d);
@@ -385,7 +391,7 @@ class appDevDebugProjectContainer extends Container
         $h = call_user_func(array('Doctrine\\ORM\\EntityManager', 'create'), $this->get('doctrine.dbal.default_connection'), $g);
         $this->get('doctrine.orm.default_manager_configurator')->configure($h);
 
-        return $this->services['doctrine.orm.default_entity_manager'] = new \EntityManager50df4d96c742f_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager($h, $this);
+        return $this->services['doctrine.orm.default_entity_manager'] = new \EntityManager50e3370c4162d_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager($h, $this);
     }
 
     /**
@@ -1645,7 +1651,7 @@ class appDevDebugProjectContainer extends Container
         $g = new \Symfony\Component\Security\Http\Authentication\DefaultAuthenticationSuccessHandler($d, array('login_path' => '/extranet/login', 'always_use_default_target_path' => false, 'default_target_path' => '/', 'target_path_parameter' => '_target_path', 'use_referer' => false));
         $g->setProviderKey('extranet');
 
-        return $this->services['security.firewall.map.context.extranet'] = new \Symfony\Bundle\SecurityBundle\Security\FirewallContext(array(0 => $this->get('security.channel_listener'), 1 => new \Symfony\Component\Security\Http\Firewall\ContextListener($a, array(0 => $this->get('security.user.provider.concrete.usuarios'), 1 => $this->get('security.user.provider.concrete.tiendas'), 2 => $this->get('security.user.provider.concrete.administradores')), 'extranet', $b, $c), 2 => $f, 3 => new \Symfony\Component\Security\Http\Firewall\UsernamePasswordFormAuthenticationListener($a, $this->get('security.authentication.manager'), $this->get('security.authentication.session_strategy'), $d, 'extranet', $g, new \Symfony\Component\Security\Http\Authentication\DefaultAuthenticationFailureHandler($e, $d, array('login_path' => '/extranet/login', 'failure_path' => NULL, 'failure_forward' => false), $b), array('check_path' => '/extranet/login_check', 'use_forward' => false, 'username_parameter' => '_username', 'password_parameter' => '_password', 'csrf_parameter' => '_csrf_token', 'intention' => 'authenticate', 'post_only' => true), $b, $c), 4 => new \Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener($a, '50df4d96ac09c', $b), 5 => $this->get('security.access_listener')), new \Symfony\Component\Security\Http\Firewall\ExceptionListener($a, $this->get('security.authentication.trust_resolver'), $d, 'extranet', new \Symfony\Component\Security\Http\EntryPoint\FormAuthenticationEntryPoint($e, $d, '/extranet/login', false), NULL, NULL, $b));
+        return $this->services['security.firewall.map.context.extranet'] = new \Symfony\Bundle\SecurityBundle\Security\FirewallContext(array(0 => $this->get('security.channel_listener'), 1 => new \Symfony\Component\Security\Http\Firewall\ContextListener($a, array(0 => $this->get('security.user.provider.concrete.usuarios'), 1 => $this->get('security.user.provider.concrete.tiendas'), 2 => $this->get('security.user.provider.concrete.administradores')), 'extranet', $b, $c), 2 => $f, 3 => new \Symfony\Component\Security\Http\Firewall\UsernamePasswordFormAuthenticationListener($a, $this->get('security.authentication.manager'), $this->get('security.authentication.session_strategy'), $d, 'extranet', $g, new \Symfony\Component\Security\Http\Authentication\DefaultAuthenticationFailureHandler($e, $d, array('login_path' => '/extranet/login', 'failure_path' => NULL, 'failure_forward' => false), $b), array('check_path' => '/extranet/login_check', 'use_forward' => false, 'username_parameter' => '_username', 'password_parameter' => '_password', 'csrf_parameter' => '_csrf_token', 'intention' => 'authenticate', 'post_only' => true), $b, $c), 4 => new \Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener($a, '50e3370c1c3ce', $b), 5 => $this->get('security.access_listener')), new \Symfony\Component\Security\Http\Firewall\ExceptionListener($a, $this->get('security.authentication.trust_resolver'), $d, 'extranet', new \Symfony\Component\Security\Http\EntryPoint\FormAuthenticationEntryPoint($e, $d, '/extranet/login', false), NULL, NULL, $b));
     }
 
     /**
@@ -1678,7 +1684,7 @@ class appDevDebugProjectContainer extends Container
         $k = new \Symfony\Component\Security\Http\Firewall\UsernamePasswordFormAuthenticationListener($a, $g, $this->get('security.authentication.session_strategy'), $e, 'frontend', $j, new \Symfony\Component\Security\Http\Authentication\DefaultAuthenticationFailureHandler($f, $e, array('login_path' => 'usuario_login', 'failure_path' => NULL, 'failure_forward' => false), $c), array('check_path' => 'usuario_login_check', 'use_forward' => false, 'username_parameter' => '_username', 'password_parameter' => '_password', 'csrf_parameter' => '_csrf_token', 'intention' => 'authenticate', 'post_only' => true), $c, $d);
         $k->setRememberMeServices($h);
 
-        return $this->services['security.firewall.map.context.frontend'] = new \Symfony\Bundle\SecurityBundle\Security\FirewallContext(array(0 => $this->get('security.channel_listener'), 1 => new \Symfony\Component\Security\Http\Firewall\ContextListener($a, array(0 => $b, 1 => $this->get('security.user.provider.concrete.tiendas'), 2 => $this->get('security.user.provider.concrete.administradores')), 'frontend', $c, $d), 2 => $i, 3 => $k, 4 => new \Symfony\Component\Security\Http\Firewall\RememberMeListener($a, $h, $g, $c, $d), 5 => new \Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener($a, '50df4d96ac09c', $c), 6 => $this->get('security.access_listener')), new \Symfony\Component\Security\Http\Firewall\ExceptionListener($a, $this->get('security.authentication.trust_resolver'), $e, 'frontend', new \Symfony\Component\Security\Http\EntryPoint\FormAuthenticationEntryPoint($f, $e, 'usuario_login', false), NULL, NULL, $c));
+        return $this->services['security.firewall.map.context.frontend'] = new \Symfony\Bundle\SecurityBundle\Security\FirewallContext(array(0 => $this->get('security.channel_listener'), 1 => new \Symfony\Component\Security\Http\Firewall\ContextListener($a, array(0 => $b, 1 => $this->get('security.user.provider.concrete.tiendas'), 2 => $this->get('security.user.provider.concrete.administradores')), 'frontend', $c, $d), 2 => $i, 3 => $k, 4 => new \Symfony\Component\Security\Http\Firewall\RememberMeListener($a, $h, $g, $c, $d), 5 => new \Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener($a, '50e3370c1c3ce', $c), 6 => $this->get('security.access_listener')), new \Symfony\Component\Security\Http\Firewall\ExceptionListener($a, $this->get('security.authentication.trust_resolver'), $e, 'frontend', new \Symfony\Component\Security\Http\EntryPoint\FormAuthenticationEntryPoint($f, $e, 'usuario_login', false), NULL, NULL, $c));
     }
 
     /**
@@ -2669,7 +2675,7 @@ class appDevDebugProjectContainer extends Container
         $instance->addExtension(new \Symfony\Bridge\Twig\Extension\RoutingExtension($this->get('router')));
         $instance->addExtension(new \Symfony\Bridge\Twig\Extension\YamlExtension());
         $instance->addExtension(new \Symfony\Bridge\Twig\Extension\FormExtension(new \Symfony\Bridge\Twig\Form\TwigRenderer(new \Symfony\Bridge\Twig\Form\TwigRendererEngine(array(0 => 'form_div_layout.html.twig')), $this->get('form.csrf_provider'))));
-        $instance->addExtension(new \Symfony\Bundle\AsseticBundle\Twig\AsseticExtension($this->get('assetic.asset_factory'), $this->get('templating.name_parser'), true, array(), array(0 => 'FrameworkBundle', 1 => 'SecurityBundle', 2 => 'TwigBundle', 3 => 'MonologBundle', 4 => 'SwiftmailerBundle', 5 => 'AsseticBundle', 6 => 'DoctrineBundle', 7 => 'SensioFrameworkExtraBundle', 8 => 'JMSAopBundle', 9 => 'JMSDiExtraBundle', 10 => 'JMSSecurityExtraBundle', 11 => 'DoctrineFixturesBundle', 12 => 'CiudadBundle', 13 => 'UsuarioBundle', 14 => 'TiendaBundle', 15 => 'OfertaBundle', 16 => 'BackendBundle', 17 => 'IdeupSimplePaginatorBundle', 18 => 'WebProfilerBundle', 19 => 'SensioDistributionBundle', 20 => 'SensioGeneratorBundle'), $this->get('assetic.value_supplier.default')));
+        $instance->addExtension(new \Symfony\Bundle\AsseticBundle\Twig\AsseticExtension($this->get('assetic.asset_factory'), $this->get('templating.name_parser'), true, array(), array(0 => 'FrameworkBundle', 1 => 'SecurityBundle', 2 => 'TwigBundle', 3 => 'MonologBundle', 4 => 'SwiftmailerBundle', 5 => 'AsseticBundle', 6 => 'DoctrineBundle', 7 => 'SensioFrameworkExtraBundle', 8 => 'JMSAopBundle', 9 => 'JMSDiExtraBundle', 10 => 'JMSSecurityExtraBundle', 11 => 'DoctrineFixturesBundle', 12 => 'CiudadBundle', 13 => 'UsuarioBundle', 14 => 'TiendaBundle', 15 => 'OfertaBundle', 16 => 'BackendBundle', 17 => 'IdeupSimplePaginatorBundle', 18 => 'ContratoBundle', 19 => 'TrabajadorBundle', 20 => 'ServicioBundle', 21 => 'WebProfilerBundle', 22 => 'SensioDistributionBundle', 23 => 'SensioGeneratorBundle'), $this->get('assetic.value_supplier.default')));
         $instance->addExtension(new \Doctrine\Bundle\DoctrineBundle\Twig\DoctrineExtension());
         $instance->addExtension($this->get('twig.extension.ideup.simple_paginator'));
         $instance->addGlobal('app', $this->get('templating.globals'));
@@ -2833,7 +2839,7 @@ class appDevDebugProjectContainer extends Container
     /**
      * Gets the doctrine.orm.entity_manager service alias.
      *
-     * @return EntityManager50df4d96c742f_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager An instance of the doctrine.orm.default_entity_manager service
+     * @return EntityManager50e3370c4162d_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager An instance of the doctrine.orm.default_entity_manager service
      */
     protected function getDoctrine_Orm_EntityManagerService()
     {
@@ -3106,7 +3112,7 @@ class appDevDebugProjectContainer extends Container
 
         $b = new \Symfony\Component\Security\Core\User\UserChecker();
 
-        $this->services['security.authentication.manager'] = $instance = new \Symfony\Component\Security\Core\Authentication\AuthenticationProviderManager(array(0 => new \Symfony\Component\Security\Core\Authentication\Provider\DaoAuthenticationProvider($this->get('security.user.provider.concrete.administradores'), $b, 'backend', $a, true), 1 => new \Symfony\Component\Security\Core\Authentication\Provider\DaoAuthenticationProvider($this->get('security.user.provider.concrete.tiendas'), $b, 'extranet', $a, true), 2 => new \Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider('50df4d96ac09c'), 3 => new \Symfony\Component\Security\Core\Authentication\Provider\DaoAuthenticationProvider($this->get('security.user.provider.concrete.usuarios'), $b, 'frontend', $a, true), 4 => new \Symfony\Component\Security\Core\Authentication\Provider\RememberMeAuthenticationProvider($b, 'cupon1234', 'frontend'), 5 => new \Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider('50df4d96ac09c')), true);
+        $this->services['security.authentication.manager'] = $instance = new \Symfony\Component\Security\Core\Authentication\AuthenticationProviderManager(array(0 => new \Symfony\Component\Security\Core\Authentication\Provider\DaoAuthenticationProvider($this->get('security.user.provider.concrete.administradores'), $b, 'backend', $a, true), 1 => new \Symfony\Component\Security\Core\Authentication\Provider\DaoAuthenticationProvider($this->get('security.user.provider.concrete.tiendas'), $b, 'extranet', $a, true), 2 => new \Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider('50e3370c1c3ce'), 3 => new \Symfony\Component\Security\Core\Authentication\Provider\DaoAuthenticationProvider($this->get('security.user.provider.concrete.usuarios'), $b, 'frontend', $a, true), 4 => new \Symfony\Component\Security\Core\Authentication\Provider\RememberMeAuthenticationProvider($b, 'cupon1234', 'frontend'), 5 => new \Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider('50e3370c1c3ce')), true);
 
         $instance->setEventDispatcher($this->get('event_dispatcher'));
 
@@ -3384,6 +3390,9 @@ class appDevDebugProjectContainer extends Container
                 'OfertaBundle' => 'Cupon\\OfertaBundle\\OfertaBundle',
                 'BackendBundle' => 'Cupon\\BackendBundle\\BackendBundle',
                 'IdeupSimplePaginatorBundle' => 'Ideup\\SimplePaginatorBundle\\IdeupSimplePaginatorBundle',
+                'ContratoBundle' => 'Cupon\\ContratoBundle\\ContratoBundle',
+                'TrabajadorBundle' => 'Cupon\\TrabajadorBundle\\TrabajadorBundle',
+                'ServicioBundle' => 'Cupon\\ServicioBundle\\ServicioBundle',
                 'WebProfilerBundle' => 'Symfony\\Bundle\\WebProfilerBundle\\WebProfilerBundle',
                 'SensioDistributionBundle' => 'Sensio\\Bundle\\DistributionBundle\\SensioDistributionBundle',
                 'SensioGeneratorBundle' => 'Sensio\\Bundle\\GeneratorBundle\\SensioGeneratorBundle',
@@ -3762,9 +3771,12 @@ class appDevDebugProjectContainer extends Container
                 15 => 'OfertaBundle',
                 16 => 'BackendBundle',
                 17 => 'IdeupSimplePaginatorBundle',
-                18 => 'WebProfilerBundle',
-                19 => 'SensioDistributionBundle',
-                20 => 'SensioGeneratorBundle',
+                18 => 'ContratoBundle',
+                19 => 'TrabajadorBundle',
+                20 => 'ServicioBundle',
+                21 => 'WebProfilerBundle',
+                22 => 'SensioDistributionBundle',
+                23 => 'SensioGeneratorBundle',
             ),
             'assetic.twig_extension.class' => 'Symfony\\Bundle\\AsseticBundle\\Twig\\AsseticExtension',
             'assetic.twig_formula_loader.class' => 'Assetic\\Extension\\Twig\\TwigFormulaLoader',
@@ -3892,8 +3904,8 @@ class appDevDebugProjectContainer extends Container
             ),
             'jms_di_extra.cache_dir' => '/home/web/Proyectos/cupon/app/cache/dev/jms_diextra',
             'jms_di_extra.doctrine_integration' => true,
-            'jms_di_extra.doctrine_integration.entity_manager.file' => '/home/web/Proyectos/cupon/app/cache/dev/jms_diextra/doctrine/EntityManager_50df4d96c742f.php',
-            'jms_di_extra.doctrine_integration.entity_manager.class' => 'EntityManager50df4d96c742f_546a8d27f194334ee012bfe64f629947b07e4919\\__CG__\\Doctrine\\ORM\\EntityManager',
+            'jms_di_extra.doctrine_integration.entity_manager.file' => '/home/web/Proyectos/cupon/app/cache/dev/jms_diextra/doctrine/EntityManager_50e3370c4162d.php',
+            'jms_di_extra.doctrine_integration.entity_manager.class' => 'EntityManager50e3370c4162d_546a8d27f194334ee012bfe64f629947b07e4919\\__CG__\\Doctrine\\ORM\\EntityManager',
             'security.secured_services' => array(
 
             ),

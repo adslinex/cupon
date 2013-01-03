@@ -26,6 +26,9 @@
       <parameter key="OfertaBundle">Cupon\OfertaBundle\OfertaBundle</parameter>
       <parameter key="BackendBundle">Cupon\BackendBundle\BackendBundle</parameter>
       <parameter key="IdeupSimplePaginatorBundle">Ideup\SimplePaginatorBundle\IdeupSimplePaginatorBundle</parameter>
+      <parameter key="ContratoBundle">Cupon\ContratoBundle\ContratoBundle</parameter>
+      <parameter key="TrabajadorBundle">Cupon\TrabajadorBundle\TrabajadorBundle</parameter>
+      <parameter key="ServicioBundle">Cupon\ServicioBundle\ServicioBundle</parameter>
       <parameter key="WebProfilerBundle">Symfony\Bundle\WebProfilerBundle\WebProfilerBundle</parameter>
       <parameter key="SensioDistributionBundle">Sensio\Bundle\DistributionBundle\SensioDistributionBundle</parameter>
       <parameter key="SensioGeneratorBundle">Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle</parameter>
@@ -392,6 +395,9 @@
       <parameter>OfertaBundle</parameter>
       <parameter>BackendBundle</parameter>
       <parameter>IdeupSimplePaginatorBundle</parameter>
+      <parameter>ContratoBundle</parameter>
+      <parameter>TrabajadorBundle</parameter>
+      <parameter>ServicioBundle</parameter>
       <parameter>WebProfilerBundle</parameter>
       <parameter>SensioDistributionBundle</parameter>
       <parameter>SensioGeneratorBundle</parameter>
@@ -512,8 +518,8 @@
     <parameter key="jms_di_extra.directories" type="collection"/>
     <parameter key="jms_di_extra.cache_dir">/home/web/Proyectos/cupon/app/cache/dev/jms_diextra</parameter>
     <parameter key="jms_di_extra.doctrine_integration">true</parameter>
-    <parameter key="jms_di_extra.doctrine_integration.entity_manager.file">/home/web/Proyectos/cupon/app/cache/dev/jms_diextra/doctrine/EntityManager_50df4d96c742f.php</parameter>
-    <parameter key="jms_di_extra.doctrine_integration.entity_manager.class">EntityManager50df4d96c742f_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager</parameter>
+    <parameter key="jms_di_extra.doctrine_integration.entity_manager.file">/home/web/Proyectos/cupon/app/cache/dev/jms_diextra/doctrine/EntityManager_50e3370c4162d.php</parameter>
+    <parameter key="jms_di_extra.doctrine_integration.entity_manager.class">EntityManager50e3370c4162d_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager</parameter>
     <parameter key="security.secured_services" type="collection"/>
     <parameter key="security.access.method_interceptor.class">JMS\SecurityExtraBundle\Security\Authorization\Interception\MethodSecurityInterceptor</parameter>
     <parameter key="security.access.method_access_control" type="collection"/>
@@ -2038,7 +2044,7 @@
         </argument>
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>50df4d96ac09c</argument>
+            <argument>50e3370c1c3ce</argument>
           </service>
         </argument>
         <argument type="service">
@@ -2063,7 +2069,7 @@
         </argument>
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>50df4d96ac09c</argument>
+            <argument>50e3370c1c3ce</argument>
           </service>
         </argument>
       </argument>
@@ -2417,7 +2423,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.context"/>
-            <argument>50df4d96ac09c</argument>
+            <argument>50e3370c1c3ce</argument>
             <argument type="service" id="monolog.logger.security"/>
           </service>
         </argument>
@@ -2602,7 +2608,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.context"/>
-            <argument>50df4d96ac09c</argument>
+            <argument>50e3370c1c3ce</argument>
             <argument type="service" id="monolog.logger.security"/>
           </service>
         </argument>
@@ -2780,6 +2786,9 @@
               <argument>OfertaBundle</argument>
               <argument>BackendBundle</argument>
               <argument>IdeupSimplePaginatorBundle</argument>
+              <argument>ContratoBundle</argument>
+              <argument>TrabajadorBundle</argument>
+              <argument>ServicioBundle</argument>
               <argument>WebProfilerBundle</argument>
               <argument>SensioDistributionBundle</argument>
               <argument>SensioGeneratorBundle</argument>
@@ -3361,6 +3370,87 @@
               <argument type="service">
                 <service class="%assetic.directory_resource.class%" public="false">
                   <argument type="service" id="templating.loader"/>
+                  <argument>ContratoBundle</argument>
+                  <argument>/home/web/Proyectos/cupon/app/Resources/ContratoBundle/views</argument>
+                  <argument>/\.[^.]+\.twig$/</argument>
+                </service>
+              </argument>
+              <argument type="service">
+                <service class="%assetic.directory_resource.class%" public="false">
+                  <argument type="service" id="templating.loader"/>
+                  <argument>ContratoBundle</argument>
+                  <argument>/home/web/Proyectos/cupon/src/Cupon/ContratoBundle/Resources/views</argument>
+                  <argument>/\.[^.]+\.twig$/</argument>
+                </service>
+              </argument>
+            </argument>
+          </service>
+        </argument>
+        <argument>twig</argument>
+      </call>
+      <call method="addResource">
+        <argument type="service">
+          <service class="Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource" public="false">
+            <tag name="assetic.templating.twig"/>
+            <tag name="assetic.formula_resource" loader="twig"/>
+            <argument type="collection">
+              <argument type="service">
+                <service class="%assetic.directory_resource.class%" public="false">
+                  <argument type="service" id="templating.loader"/>
+                  <argument>TrabajadorBundle</argument>
+                  <argument>/home/web/Proyectos/cupon/app/Resources/TrabajadorBundle/views</argument>
+                  <argument>/\.[^.]+\.twig$/</argument>
+                </service>
+              </argument>
+              <argument type="service">
+                <service class="%assetic.directory_resource.class%" public="false">
+                  <argument type="service" id="templating.loader"/>
+                  <argument>TrabajadorBundle</argument>
+                  <argument>/home/web/Proyectos/cupon/src/Cupon/TrabajadorBundle/Resources/views</argument>
+                  <argument>/\.[^.]+\.twig$/</argument>
+                </service>
+              </argument>
+            </argument>
+          </service>
+        </argument>
+        <argument>twig</argument>
+      </call>
+      <call method="addResource">
+        <argument type="service">
+          <service class="Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource" public="false">
+            <tag name="assetic.templating.twig"/>
+            <tag name="assetic.formula_resource" loader="twig"/>
+            <argument type="collection">
+              <argument type="service">
+                <service class="%assetic.directory_resource.class%" public="false">
+                  <argument type="service" id="templating.loader"/>
+                  <argument>ServicioBundle</argument>
+                  <argument>/home/web/Proyectos/cupon/app/Resources/ServicioBundle/views</argument>
+                  <argument>/\.[^.]+\.twig$/</argument>
+                </service>
+              </argument>
+              <argument type="service">
+                <service class="%assetic.directory_resource.class%" public="false">
+                  <argument type="service" id="templating.loader"/>
+                  <argument>ServicioBundle</argument>
+                  <argument>/home/web/Proyectos/cupon/src/Cupon/ServicioBundle/Resources/views</argument>
+                  <argument>/\.[^.]+\.twig$/</argument>
+                </service>
+              </argument>
+            </argument>
+          </service>
+        </argument>
+        <argument>twig</argument>
+      </call>
+      <call method="addResource">
+        <argument type="service">
+          <service class="Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource" public="false">
+            <tag name="assetic.templating.twig"/>
+            <tag name="assetic.formula_resource" loader="twig"/>
+            <argument type="collection">
+              <argument type="service">
+                <service class="%assetic.directory_resource.class%" public="false">
+                  <argument type="service" id="templating.loader"/>
                   <argument>WebProfilerBundle</argument>
                   <argument>/home/web/Proyectos/cupon/app/Resources/WebProfilerBundle/views</argument>
                   <argument>/\.[^.]+\.twig$/</argument>
@@ -3614,8 +3704,8 @@
     <service id="doctrine.orm.default_manager_configurator" class="Doctrine\Bundle\DoctrineBundle\ManagerConfigurator">
       <argument type="collection"/>
     </service>
-    <service id="doctrine.orm.default_entity_manager" class="EntityManager50df4d96c742f_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager">
-      <file>/home/web/Proyectos/cupon/app/cache/dev/jms_diextra/doctrine/EntityManager_50df4d96c742f.php</file>
+    <service id="doctrine.orm.default_entity_manager" class="EntityManager50e3370c4162d_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager">
+      <file>/home/web/Proyectos/cupon/app/cache/dev/jms_diextra/doctrine/EntityManager_50e3370c4162d.php</file>
       <argument type="service">
         <service class="Doctrine\ORM\EntityManager" factory-method="create" public="false">
           <argument type="service" id="doctrine.dbal.default_connection"/>
@@ -3627,6 +3717,9 @@
                   <argument key="UsuarioBundle">Cupon\UsuarioBundle\Entity</argument>
                   <argument key="TiendaBundle">Cupon\TiendaBundle\Entity</argument>
                   <argument key="OfertaBundle">Cupon\OfertaBundle\Entity</argument>
+                  <argument key="ContratoBundle">Cupon\ContratoBundle\Entity</argument>
+                  <argument key="TrabajadorBundle">Cupon\TrabajadorBundle\Entity</argument>
+                  <argument key="ServicioBundle">Cupon\ServicioBundle\Entity</argument>
                 </argument>
               </call>
               <call method="setMetadataCacheImpl">
@@ -3668,6 +3761,9 @@
                             <argument>/home/web/Proyectos/cupon/src/Cupon/UsuarioBundle/Entity</argument>
                             <argument>/home/web/Proyectos/cupon/src/Cupon/TiendaBundle/Entity</argument>
                             <argument>/home/web/Proyectos/cupon/src/Cupon/OfertaBundle/Entity</argument>
+                            <argument>/home/web/Proyectos/cupon/src/Cupon/ContratoBundle/Entity</argument>
+                            <argument>/home/web/Proyectos/cupon/src/Cupon/TrabajadorBundle/Entity</argument>
+                            <argument>/home/web/Proyectos/cupon/src/Cupon/ServicioBundle/Entity</argument>
                           </argument>
                         </service>
                       </argument>
@@ -3682,6 +3778,9 @@
                             <argument>/home/web/Proyectos/cupon/src/Cupon/UsuarioBundle/Entity</argument>
                             <argument>/home/web/Proyectos/cupon/src/Cupon/TiendaBundle/Entity</argument>
                             <argument>/home/web/Proyectos/cupon/src/Cupon/OfertaBundle/Entity</argument>
+                            <argument>/home/web/Proyectos/cupon/src/Cupon/ContratoBundle/Entity</argument>
+                            <argument>/home/web/Proyectos/cupon/src/Cupon/TrabajadorBundle/Entity</argument>
+                            <argument>/home/web/Proyectos/cupon/src/Cupon/ServicioBundle/Entity</argument>
                           </argument>
                         </service>
                       </argument>
@@ -3696,6 +3795,9 @@
                             <argument>/home/web/Proyectos/cupon/src/Cupon/UsuarioBundle/Entity</argument>
                             <argument>/home/web/Proyectos/cupon/src/Cupon/TiendaBundle/Entity</argument>
                             <argument>/home/web/Proyectos/cupon/src/Cupon/OfertaBundle/Entity</argument>
+                            <argument>/home/web/Proyectos/cupon/src/Cupon/ContratoBundle/Entity</argument>
+                            <argument>/home/web/Proyectos/cupon/src/Cupon/TrabajadorBundle/Entity</argument>
+                            <argument>/home/web/Proyectos/cupon/src/Cupon/ServicioBundle/Entity</argument>
                           </argument>
                         </service>
                       </argument>
@@ -3710,10 +3812,64 @@
                             <argument>/home/web/Proyectos/cupon/src/Cupon/UsuarioBundle/Entity</argument>
                             <argument>/home/web/Proyectos/cupon/src/Cupon/TiendaBundle/Entity</argument>
                             <argument>/home/web/Proyectos/cupon/src/Cupon/OfertaBundle/Entity</argument>
+                            <argument>/home/web/Proyectos/cupon/src/Cupon/ContratoBundle/Entity</argument>
+                            <argument>/home/web/Proyectos/cupon/src/Cupon/TrabajadorBundle/Entity</argument>
+                            <argument>/home/web/Proyectos/cupon/src/Cupon/ServicioBundle/Entity</argument>
                           </argument>
                         </service>
                       </argument>
                       <argument>Cupon\OfertaBundle\Entity</argument>
+                    </call>
+                    <call method="addDriver">
+                      <argument type="service">
+                        <service class="Doctrine\ORM\Mapping\Driver\AnnotationDriver" public="false">
+                          <argument type="service" id="annotation_reader"/>
+                          <argument type="collection">
+                            <argument>/home/web/Proyectos/cupon/src/Cupon/CiudadBundle/Entity</argument>
+                            <argument>/home/web/Proyectos/cupon/src/Cupon/UsuarioBundle/Entity</argument>
+                            <argument>/home/web/Proyectos/cupon/src/Cupon/TiendaBundle/Entity</argument>
+                            <argument>/home/web/Proyectos/cupon/src/Cupon/OfertaBundle/Entity</argument>
+                            <argument>/home/web/Proyectos/cupon/src/Cupon/ContratoBundle/Entity</argument>
+                            <argument>/home/web/Proyectos/cupon/src/Cupon/TrabajadorBundle/Entity</argument>
+                            <argument>/home/web/Proyectos/cupon/src/Cupon/ServicioBundle/Entity</argument>
+                          </argument>
+                        </service>
+                      </argument>
+                      <argument>Cupon\ContratoBundle\Entity</argument>
+                    </call>
+                    <call method="addDriver">
+                      <argument type="service">
+                        <service class="Doctrine\ORM\Mapping\Driver\AnnotationDriver" public="false">
+                          <argument type="service" id="annotation_reader"/>
+                          <argument type="collection">
+                            <argument>/home/web/Proyectos/cupon/src/Cupon/CiudadBundle/Entity</argument>
+                            <argument>/home/web/Proyectos/cupon/src/Cupon/UsuarioBundle/Entity</argument>
+                            <argument>/home/web/Proyectos/cupon/src/Cupon/TiendaBundle/Entity</argument>
+                            <argument>/home/web/Proyectos/cupon/src/Cupon/OfertaBundle/Entity</argument>
+                            <argument>/home/web/Proyectos/cupon/src/Cupon/ContratoBundle/Entity</argument>
+                            <argument>/home/web/Proyectos/cupon/src/Cupon/TrabajadorBundle/Entity</argument>
+                            <argument>/home/web/Proyectos/cupon/src/Cupon/ServicioBundle/Entity</argument>
+                          </argument>
+                        </service>
+                      </argument>
+                      <argument>Cupon\TrabajadorBundle\Entity</argument>
+                    </call>
+                    <call method="addDriver">
+                      <argument type="service">
+                        <service class="Doctrine\ORM\Mapping\Driver\AnnotationDriver" public="false">
+                          <argument type="service" id="annotation_reader"/>
+                          <argument type="collection">
+                            <argument>/home/web/Proyectos/cupon/src/Cupon/CiudadBundle/Entity</argument>
+                            <argument>/home/web/Proyectos/cupon/src/Cupon/UsuarioBundle/Entity</argument>
+                            <argument>/home/web/Proyectos/cupon/src/Cupon/TiendaBundle/Entity</argument>
+                            <argument>/home/web/Proyectos/cupon/src/Cupon/OfertaBundle/Entity</argument>
+                            <argument>/home/web/Proyectos/cupon/src/Cupon/ContratoBundle/Entity</argument>
+                            <argument>/home/web/Proyectos/cupon/src/Cupon/TrabajadorBundle/Entity</argument>
+                            <argument>/home/web/Proyectos/cupon/src/Cupon/ServicioBundle/Entity</argument>
+                          </argument>
+                        </service>
+                      </argument>
+                      <argument>Cupon\ServicioBundle\Entity</argument>
                     </call>
                   </service>
                 </argument>
