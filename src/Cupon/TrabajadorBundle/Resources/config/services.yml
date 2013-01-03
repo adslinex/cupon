@@ -1,0 +1,7 @@
+parameters:
+#    trabajador.example.class: Cupon\TrabajadorBundle\Example
+
+services:
+#    trabajador.example:
+#        class: %trabajador.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

@@ -1,0 +1,33 @@
+<?php
+// src/Planilla/TrabajadorBundle/DataFixtures/ORM/Trabajadores.php
+namespace Planilla\TrabajadorBundle\DataFixtures\ORM;
+use Doctrine\Common\DataFixtures\FixtureInterface;
+use Doctrine\Common\Persistence\ObjectManager;
+use Planilla\TrabajadorBundle\Entity\Trabajador;
+
+class Trabajadores implements FixtureInterface
+{
+public function load(ObjectManager $manager)
+{
+$Trabajadores = array(
+array('nombre' => 'Luis', 'apellido1' => 'Perez', 'dni' => '145879Y', 'usuario' => 'luis.perez', 'password' => 'luis.perez', 'num_empleado' => '1000'),
+array('nombre' => 'Pedro', 'apellido1' => 'Gomez', 'dni' => '22222222R', 'num_empleado' => '1001'),
+array('nombre' => 'Pablo', 'apellido1' => 'Iribar', 'dni' => '22222245O', 'num_empleado' => '1002'),
+array('nombre' => 'Antonio', 'apellido1' => 'Pirri', 'dni' => '22222225P', 'num_empleado' => '1003'),
+array('nombre' => 'Jose', 'apellido1' => 'Lopez', 'dni' => '22222224A', 'num_empleado' => '1004'),
+array('nombre' => 'Manuel', 'apellido1' => 'Santos', 'dni' => '22222225S', 'num_empleado' => '1005'),
+array('nombre' => 'Ana', 'apellido1' => 'Paz', 'dni' => '22222226D', 'num_empleado' => '1006'),
+// ...
+);
+foreach ($Trabajadores as $Trabajador) {
+$entidad = new Trabajador();
+$entidad->setNombre($Trabajador['nombre']);
+$entidad->setApellido1($Trabajador['apellido1']);
+$entidad->setDni($Trabajador['dni']);
+$entidad->setFechaini(new \DateTime());
+$entidad->setFechafin(new \DateTime('9999-12-31'));
+$manager->persist($entidad);
+}
+$manager->flush();
+}
+}

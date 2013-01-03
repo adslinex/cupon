@@ -1,0 +1,26 @@
+<?php
+// src/Planilla/ContratoBundle/DataFixtures/ORM/Categorias.php
+namespace Planilla\ContratoBundle\DataFixtures\ORM;
+use Doctrine\Common\DataFixtures\FixtureInterface;
+use Doctrine\Common\Persistence\ObjectManager;
+use Planilla\ContratoBundle\Entity\Categoria;
+
+class Contratos implements FixtureInterface
+{
+public function load(ObjectManager $manager)
+{
+for ($i = 0; $i < 10; $i++)
+{
+$entidad = new Contrato();
+
+$entidad->setTrabajador(rand(1,5));
+$entidad->setFechaini(new \DateTime());
+$entidad->setFechafin(new \DateTime('9999-12-31'));
+$entidad->setCategoria(rand(1,2));
+$entidad->setPorciento(100);
+
+$manager->persist($entidad);
+}
+$manager->flush();
+}
+}

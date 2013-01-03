@@ -48,7 +48,10 @@ class AppKernel extends Kernel
             //     "sonata-project/doctrine-orm-admin-bundle": "dev-master"
             //
             // Y no olvides instalarlas ejecutando el siguiente comando:
-            //     $ php composer.phar update 
+            //     $ php composer.phar update,
+            new Cupon\ContratoBundle\ContratoBundle(),
+            new Cupon\TrabajadorBundle\TrabajadorBundle(),
+            new Cupon\ServicioBundle\ServicioBundle(),
         );
         
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

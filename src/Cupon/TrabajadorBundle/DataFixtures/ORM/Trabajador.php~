@@ -1,0 +1,21 @@
+<?php
+// src/Planilla/TrabajadorBundle/DataFixtures/ORM/Trabajadores.php
+namespace Planilla\TrabajadorBundle\DataFixtures\ORM;
+use Doctrine\Common\DataFixtures\FixtureInterface;
+use Doctrine\Common\Persistence\ObjectManager;
+use Planilla\TrabajadorBundle\Entity\Trabajador;
+class Trabajadores implements FixtureInterface
+{
+public function load(ObjectManager $manager)
+{
+$Trabajadores = array(array('nombre' => 'Luis', apellido1, => 'Perez', 'slug' => 'luis_perez'));
+foreach ($Trabajadores as $Trabajador) {
+$entidad = new Trabajador();
+$entidad->setNombre($Trabajador['nombre']);
+$entidad->setNombre($Trabajador['apellido1']);
+$entidad->setSlug($Trabajador['slug']);
+$manager->persist($entidad);
+}
+$manager->flush();
+}
+}

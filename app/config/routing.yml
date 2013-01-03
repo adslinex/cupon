@@ -1,3 +1,15 @@
+servicio:
+    resource: "@ServicioBundle/Resources/config/routing.yml"
+    prefix:   /
+
+trabajador:
+    resource: "@TrabajadorBundle/Resources/config/routing.yml"
+    prefix:   /
+
+contrato:
+    resource: "@ContratoBundle/Resources/config/routing.yml"
+    prefix:   /
+
 # Descomenta las siguientes líneas para probar Sonata Admin Bundle
 # sonata:
 #    resource: '@SonataAdminBundle/Resources/config/routing/sonata_admin.xml'

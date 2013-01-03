@@ -1,0 +1,495 @@
+<?php
+
+namespace Cupon\TrabajadorBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+use Cupon\ContratoBundle\Util\Util;
+/**
+ * Cupon\TrabajadorBundle\Entity\Trabajador
+ *
+ * @ORM\Table()
+ * @ORM\Entity
+ */
+class Trabajador
+{
+    /**
+     * @var integer $id
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string $num_empleado
+     *
+     * @ORM\Column(name="num_empleado", type="string", length=8)
+     */
+    private $num_empleado;
+
+    /**
+     * @var string $nombre
+     *
+     * @ORM\Column(name="nombre", type="string", length=100)
+     */
+    private $nombre;
+
+    /**
+     * @var string $apellido1
+     *
+     * @ORM\Column(name="apellido1", type="string", length=100)
+     */
+    private $apellido1;
+
+    /**
+     * @var string $apellido2
+     *
+     * @ORM\Column(name="apellido2", type="string", length=100, nullable=true)
+     */
+    private $apellido2;
+
+    /**
+     * @var string $dni
+     *
+     * @ORM\Column(name="dni", type="string", length=9, nullable=true, nullable=true)
+     */
+    private $dni;
+
+    /**
+     * @var string $telefono
+     *
+     * @ORM\Column(name="telefono", type="string", length=9, nullable=true)
+     */
+    private $telefono;
+
+    /**
+     * @var string $telefono2
+     *
+     * @ORM\Column(name="telefono2", type="string", length=9, nullable=true)
+     */
+    private $telefono2;
+
+    /**
+     * @var string $localidad
+     *
+     * @ORM\Column(name="localidad", type="string", length=255, nullable=true)
+     */
+    private $localidad;
+
+    /**
+     * @var string $usuario
+     * 
+     * @ORM\Column(name="usuario", type="string", length=30, nullable=true)
+     */
+    private $usuario;
+
+    /**
+     * @var string $password
+     *
+     * @ORM\Column(name="password", type="string", length=10, nullable=true)
+     */
+    private $password;
+
+    /**
+     * @var string $slug
+     *
+     * @ORM\Column(name="slug", type="string", length=255)
+     */
+    private $slug;
+
+    /**
+     * @var \DateTime $fechaini
+     *
+     * @ORM\Column(name="fechaini", type="datetime")
+     */
+    private $fechaini;
+
+    /**
+     * @var \DateTime $fechafin
+     *
+     * @ORM\Column(name="fechafin", type="datetime")
+     */
+    private $fechafin;
+
+    /**
+     * @var \DateTime $fecha_nacimiento
+     *
+     * @ORM\Column(name="fecha_nacimiento", type="datetime", nullable=true)
+     */
+    private $fecha_nacimiento;
+
+    /**
+     * @var \DateTime $fecha_antiguedad
+     *
+     * @ORM\Column(name="fecha_antiguedad", type="datetime", nullable=true)
+     */
+    private $fecha_antiguedad;
+
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set num_empleado
+     *
+     * @param string $numEmpleado
+     * @return Trabajador
+     */
+    public function setNumEmpleado($numEmpleado)
+    {
+        $this->num_empleado = $numEmpleado;
+    
+        return $this;
+    }
+
+    /**
+     * Get num_empleado
+     *
+     * @return string 
+     */
+    public function getNumEmpleado()
+    {
+        return $this->num_empleado;
+    }
+
+    /**
+     * Set nombre
+     *
+     * @param string $nombre
+     * @return Trabajador
+     */
+    public function setNombre($nombre)
+    {
+        $this->nombre = $nombre;
+        $this->slug = Util::getSlug($nombre);
+    
+        return $this;
+    }
+
+    /**
+     * Get nombre
+     *
+     * @return string 
+     */
+    public function getNombre()
+    {
+        return $this->nombre;
+    }
+
+    /**
+     * Set apellido1
+     *
+     * @param string $apellido1
+     * @return Trabajador
+     */
+    public function setApellido1($apellido1)
+    {
+        $this->apellido1 = $apellido1;
+    
+        return $this;
+    }
+
+    /**
+     * Get apellido1
+     *
+     * @return string 
+     */
+    public function getApellido1()
+    {
+        return $this->apellido1;
+    }
+
+    /**
+     * Set apellido2
+     *
+     * @param string $apellido2
+     * @return Trabajador
+     */
+    public function setApellido2($apellido2)
+    {
+        $this->apellido2 = $apellido2;
+    
+        return $this;
+    }
+
+    /**
+     * Get apellido2
+     *
+     * @return string 
+     */
+    public function getApellido2()
+    {
+        return $this->apellido2;
+    }
+
+    /**
+     * Set dni
+     *
+     * @param string $dni
+     * @return Trabajador
+     */
+    public function setDni($dni)
+    {
+        $this->dni = $dni;
+    
+        return $this;
+    }
+
+    /**
+     * Get dni
+     *
+     * @return string 
+     */
+    public function getDni()
+    {
+        return $this->dni;
+    }
+
+    /**
+     * Set telefono
+     *
+     * @param string $telefono
+     * @return Trabajador
+     */
+    public function setTelefono($telefono)
+    {
+        $this->telefono = $telefono;
+    
+        return $this;
+    }
+
+    /**
+     * Get telefono
+     *
+     * @return string 
+     */
+    public function getTelefono()
+    {
+        return $this->telefono;
+    }
+
+    /**
+     * Set telefono2
+     *
+     * @param string $telefono2
+     * @return Trabajador
+     */
+    public function setTelefono2($telefono2)
+    {
+        $this->telefono2 = $telefono2;
+    
+        return $this;
+    }
+
+    /**
+     * Get telefono2
+     *
+     * @return string 
+     */
+    public function getTelefono2()
+    {
+        return $this->telefono2;
+    }
+
+    /**
+     * Set localidad
+     *
+     * @param string $localidad
+     * @return Trabajador
+     */
+    public function setLocalidad($localidad)
+    {
+        $this->localidad = $localidad;
+    
+        return $this;
+    }
+
+    /**
+     * Get localidad
+     *
+     * @return string 
+     */
+    public function getLocalidad()
+    {
+        return $this->localidad;
+    }
+
+    /**
+     * Set usuario
+     *
+     * @param string $usuario
+     * @return Trabajador
+     */
+    public function setUsuario($usuario)
+    {
+        $this->usuario = $usuario;
+    
+        return $this;
+    }
+
+    /**
+     * Get usuario
+     *
+     * @return string 
+     */
+    public function getUsuario()
+    {
+        return $this->usuario;
+    }
+
+    /**
+     * Set password
+     *
+     * @param string $password
+     * @return Trabajador
+     */
+    public function setPassword($password)
+    {
+        $this->password = $password;
+    
+        return $this;
+    }
+
+    /**
+     * Get password
+     *
+     * @return string 
+     */
+    public function getPassword()
+    {
+        return $this->password;
+    }
+
+    /**
+     * Get slug
+     *
+     * @return string 
+     */
+    public function getSlug()
+    {
+        return $this->slug;
+    }
+
+    /**
+     * Set fechaini
+     *
+     * @param \DateTime $fechaini
+     * @return Trabajador
+     */
+    public function setFechaini($fechaini)
+    {
+        $this->fechaini = $fechaini;
+    
+        return $this;
+    }
+
+    /**
+     * Get fechaini
+     *
+     * @return \DateTime 
+     */
+    public function getFechaini()
+    {
+        return $this->fechaini;
+    }
+
+    /**
+     * Set fechafin
+     *
+     * @param \DateTime $fechafin
+     * @return Trabajador
+     */
+    public function setFechafin($fechafin)
+    {
+        $this->fechafin = $fechafin;
+    
+        return $this;
+    }
+
+    /**
+     * Get fechafin
+     *
+     * @return \DateTime 
+     */
+    public function getFechafin()
+    {
+        return $this->fechafin;
+    }
+
+    /**
+     * Set fecha_nacimiento
+     *
+     * @param \DateTime $fechaNacimiento
+     * @return Trabajador
+     */
+    public function setFechaNacimiento($fechaNacimiento)
+    {
+        $this->fecha_nacimiento = $fechaNacimiento;
+    
+        return $this;
+    }
+
+    /**
+     * Get fecha_nacimiento
+     *
+     * @return \DateTime 
+     */
+    public function getFechaNacimiento()
+    {
+        return $this->fecha_nacimiento;
+    }
+
+    /**
+     * Set fecha_antiguedad
+     *
+     * @param \DateTime $fechaAntiguedad
+     * @return Trabajador
+     */
+    public function setFechaAntiguedad($fechaAntiguedad)
+    {
+        $this->fecha_antiguedad = $fechaAntiguedad;
+    
+        return $this;
+    }
+
+    /**
+     * Get fecha_antiguedad
+     *
+     * @return \DateTime 
+     */
+    public function getFechaAntiguedad()
+    {
+        return $this->fecha_antiguedad;
+    }
+
+    public function __toString()
+    {
+        return $this->getNombre().' '.$this->getApellido1().' '.getApellido2();
+    }
+
+    /**
+     * Set slug
+     *
+     * @param string $slug
+     * @return Trabajador
+     */
+    public function setSlug($slug)
+    {
+        $this->slug = $slug;
+    
+        return $this;
+    }
+    
+    public function __construct() {
+        $this->fechaini = new \DateTime();
+        $this->fechafin = new \DateTime('9999-12-31');
+    }
+}

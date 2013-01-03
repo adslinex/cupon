@@ -1,0 +1,26 @@
+<?php
+// src/Planilla/ContratoBundle/DataFixtures/ORM/Categorias.php
+namespace Planilla\ContratoBundle\DataFixtures\ORM;
+use Doctrine\Common\DataFixtures\FixtureInterface;
+use Doctrine\Common\Persistence\ObjectManager;
+use Planilla\ContratoBundle\Entity\Categoria;
+
+class Categorias implements FixtureInterface
+{
+public function load(ObjectManager $manager)
+{
+$Categorias = array(
+array('nombre' => 'Enfermero'),
+array('nombre' => 'Aux. Enfereria', 'descripcion' => 'Tecnico Sanitario'),
+// ...
+);
+foreach ($Categorias as $Categoria) {
+$entidad = new Categoria();
+$entidad->setNombre($Categoria['nombre']);
+$entidad->setFechaini(new \DateTime());
+$entidad->setFechafin('9999-12-31');
+$manager->persist($entidad);
+}
+$manager->flush();
+}
+}
