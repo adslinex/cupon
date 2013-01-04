@@ -9,11 +9,11 @@ use Doctrine\Common\Persistence\ObjectManager;
 use Cupon\ContratoBundle\Entity\Contrato;
 use Cupon\ContratoBundle\Entity\Categoria;
 use Cupon\TrabajadorBundle\Entity\Trabajador;
-class Contratos implements FixtureInterface
+class Contratos extends AbstractFixture implements OrderedFixtureInterface
 {
     public function getOrder()
     {
-        return 50;
+        return 60;
     }
     
     public function load(ObjectManager $manager)
@@ -24,15 +24,16 @@ class Contratos implements FixtureInterface
         
         foreach ($trabajadores as $trabajador) {
             $contrato = new Contrato();
-            $fechainicio = new \DateTime
-            $contrato->setFechaini(new \DateTime('now - '.rand(0, 250).' days'));
-            $contrato->setFechafin(new \DateTime(9999-12-31));
+            $fechainicio = new \DateTime('now - '.rand(0,365).' days');
+            $fechafinal = new \DateTime('now + '.rand(0,365).' days');
+            $contrato->setFechaini($fechainicio);
+            $contrato->setFechafin($fechafinal);
             $contrato->setTrabajador($trabajador);
             $contrato->setCategoria(array_rand($categorias));
             $contrato->setPorciento(100);
             
             $manager->persist($contrato);
-}
-$manager->flush();
-}
+        }
+        $manager->flush();
+    }
 }

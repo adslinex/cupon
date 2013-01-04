@@ -19,7 +19,7 @@ class Trabajadores extends AbstractFixture implements OrderedFixtureInterface, C
 {
     public function getOrder()
     {
-        return 40;
+        return 10;
     }
 
     private $container;

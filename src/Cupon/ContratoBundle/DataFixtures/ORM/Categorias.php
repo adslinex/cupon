@@ -11,7 +11,7 @@ class Categorias extends AbstractFixture implements OrderedFixtureInterface
 {
     public function getOrder()
     {
-        return 10;
+        return 30;
     }
 public function load(ObjectManager $manager)
 {

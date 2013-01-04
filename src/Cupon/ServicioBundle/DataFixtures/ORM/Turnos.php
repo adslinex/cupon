@@ -1,12 +1,19 @@
 <?php
-// src/Planilla/ServicioBundle/DataFixtures/ORM/Turnos.php
-namespace Planilla\ServicioBundle\DataFixtures\ORM;
-use Doctrine\Common\DataFixtures\FixtureInterface;
-use Doctrine\Common\Persistence\ObjectManager;
-use Planilla\ServicioBundle\Entity\Turno;
+// src/Cupon/ServicioBundle/DataFixtures/ORM/Turnos.php
+namespace Cupon\ServicioBundle\DataFixtures\ORM;
 
-class Turnos implements FixtureInterface
+use Doctrine\Common\DataFixtures\AbstractFixture;
+use Doctrine\Common\DataFixtures\FixtureInterface;
+use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
+use Doctrine\Common\Persistence\ObjectManager;
+use Cupon\ServicioBundle\Entity\Turno;
+
+class Turnos extends AbstractFixture implements OrderedFixtureInterface
 {
+    public function getOrder()
+    {
+        return 40;
+    }
 public function load(ObjectManager $manager)
     {
     $Turnos = array(
@@ -21,6 +28,8 @@ public function load(ObjectManager $manager)
         $entidad->setDescripcion($Turno['descripcion']);
         $entidad->setHorasdia($Turno['horasdia']);
         $entidad->setHorasnoche($Turno['horasnoche']);
+        $entidad->setFechaini(new \DateTime(2001-01-01));
+        $entidad->setFechafin(new \DateTime(9999-12-31));
         $manager->persist($entidad);
     }
     $manager->flush();
