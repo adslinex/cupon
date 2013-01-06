@@ -5,7 +5,7 @@ namespace Cupon\ServicioBundle\DataFixtures\ORM;
 use Doctrine\Common\DataFixtures\AbstractFixture;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
-use Cupon\ContratoBundle\Entity\Centro;
+use Cupon\ServicioBundle\Entity\Centro;
 
 class Centros extends AbstractFixture implements OrderedFixtureInterface
 {

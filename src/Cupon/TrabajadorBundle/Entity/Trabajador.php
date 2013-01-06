@@ -4,6 +4,7 @@ namespace Cupon\TrabajadorBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Cupon\ContratoBundle\Util\Util;
+
 /**
  * Cupon\TrabajadorBundle\Entity\Trabajador
  *
@@ -472,7 +473,7 @@ class Trabajador
 
     public function __toString()
     {
-        return $this->getNombre().' '.$this->getApellido1().' '.getApellido2();
+        return $this->getNombre().' '.$this->getApellido1().' '.$this->getApellido2();
     }
 
     /**

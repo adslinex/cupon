@@ -518,8 +518,8 @@
     <parameter key="jms_di_extra.directories" type="collection"/>
     <parameter key="jms_di_extra.cache_dir">/home/web/Proyectos/cupon/app/cache/dev/jms_diextra</parameter>
     <parameter key="jms_di_extra.doctrine_integration">true</parameter>
-    <parameter key="jms_di_extra.doctrine_integration.entity_manager.file">/home/web/Proyectos/cupon/app/cache/dev/jms_diextra/doctrine/EntityManager_50e3370c4162d.php</parameter>
-    <parameter key="jms_di_extra.doctrine_integration.entity_manager.class">EntityManager50e3370c4162d_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager</parameter>
+    <parameter key="jms_di_extra.doctrine_integration.entity_manager.file">/home/web/Proyectos/cupon/app/cache/dev/jms_diextra/doctrine/EntityManager_50e6d3bc765ad.php</parameter>
+    <parameter key="jms_di_extra.doctrine_integration.entity_manager.class">EntityManager50e6d3bc765ad_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager</parameter>
     <parameter key="security.secured_services" type="collection"/>
     <parameter key="security.access.method_interceptor.class">JMS\SecurityExtraBundle\Security\Authorization\Interception\MethodSecurityInterceptor</parameter>
     <parameter key="security.access.method_access_control" type="collection"/>
@@ -2044,7 +2044,7 @@
         </argument>
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>50e3370c1c3ce</argument>
+            <argument>50e6d3bbd6d32</argument>
           </service>
         </argument>
         <argument type="service">
@@ -2069,7 +2069,7 @@
         </argument>
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>50e3370c1c3ce</argument>
+            <argument>50e6d3bbd6d32</argument>
           </service>
         </argument>
       </argument>
@@ -2423,7 +2423,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.context"/>
-            <argument>50e3370c1c3ce</argument>
+            <argument>50e6d3bbd6d32</argument>
             <argument type="service" id="monolog.logger.security"/>
           </service>
         </argument>
@@ -2608,7 +2608,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.context"/>
-            <argument>50e3370c1c3ce</argument>
+            <argument>50e6d3bbd6d32</argument>
             <argument type="service" id="monolog.logger.security"/>
           </service>
         </argument>
@@ -3704,8 +3704,8 @@
     <service id="doctrine.orm.default_manager_configurator" class="Doctrine\Bundle\DoctrineBundle\ManagerConfigurator">
       <argument type="collection"/>
     </service>
-    <service id="doctrine.orm.default_entity_manager" class="EntityManager50e3370c4162d_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager">
-      <file>/home/web/Proyectos/cupon/app/cache/dev/jms_diextra/doctrine/EntityManager_50e3370c4162d.php</file>
+    <service id="doctrine.orm.default_entity_manager" class="EntityManager50e6d3bc765ad_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager">
+      <file>/home/web/Proyectos/cupon/app/cache/dev/jms_diextra/doctrine/EntityManager_50e6d3bc765ad.php</file>
       <argument type="service">
         <service class="Doctrine\ORM\EntityManager" factory-method="create" public="false">
           <argument type="service" id="doctrine.dbal.default_connection"/>

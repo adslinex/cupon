@@ -1,6 +1,6 @@
 <?php
-// src/Planilla/ContratoBundle/DataFixtures/ORM/Contratos.php
-namespace Planilla\ContratoBundle\DataFixtures\ORM;
+// src/Cupon/ContratoBundle/DataFixtures/ORM/Contratos.php
+namespace Cupon\ContratoBundle\DataFixtures\ORM;
 
 use Doctrine\Common\DataFixtures\AbstractFixture;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
@@ -29,11 +29,13 @@ class Contratos extends AbstractFixture implements OrderedFixtureInterface
             $contrato->setFechaini($fechainicio);
             $contrato->setFechafin($fechafinal);
             $contrato->setTrabajador($trabajador);
-            $contrato->setCategoria(array_rand($categorias));
+            // Una categoria al azar entre la seleccion de categorias
+            $categoria = $categoria[array_rand($categorias)];
             $contrato->setPorciento(100);
             
             $manager->persist($contrato);
         }
+ 
         $manager->flush();
     }
 }

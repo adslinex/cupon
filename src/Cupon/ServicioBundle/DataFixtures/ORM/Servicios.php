@@ -9,16 +9,16 @@ use Doctrine\Common\DataFixtures\AbstractFixture;
 use Cupon\ServicioBundle\Entity\Servicio;
 use Cupon\ContratoBundle\Entity\Centro;
 
-class Servicios extends AbstractFixture implements FixtureInterface
+class Servicios extends AbstractFixture implements OrderedFixtureInterface
 {
     public function getOrder()
     {
-        return 50;
+        return 70;
     }
 public function load(ObjectManager $manager)
         {
         // Obtener todas las centros de la base de datos
-        $centros = $manager->getRepository('CentroBundle:Centro')->findAll();
+        $centros = $manager->getRepository('ServicioBundle:Centro')->findAll();
         $Servicios = array(
         array('nombre' => 'URG'),
         array('nombre' => 'MINT'),
@@ -31,8 +31,8 @@ public function load(ObjectManager $manager)
                 $entidad = new Servicio();
                 $entidad->setNombre($Servicio['nombre']);
                 $entidad->setCentro($centro);
-                $entidad->setFechaini(new \DateTime(2001-01-01));
-                $entidad->setFechafin(new \DateTime(9999-12-31));
+                //$entidad->setsetFechaini(new \DateTime(2001-01-01));
+                //$entidad->setFechafin(new \DateTime(9999-12-31));
                 $manager->persist($entidad);
             }
             $manager->flush();

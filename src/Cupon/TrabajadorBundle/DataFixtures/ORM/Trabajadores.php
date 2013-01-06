@@ -46,14 +46,15 @@ class Trabajadores extends AbstractFixture implements OrderedFixtureInterface, C
 
            // $trabajador->setSalt(base_convert(sha1(uniqid(mt_rand(), true)), 16, 36));
 
-           $passwordEnClaro = 'trabajador'.$i;
-            $encoder = $this->container->get('security.encoder_factory')->getEncoder($trabajador);
-            $passwordCodificado = $encoder->encodePassword($passwordEnClaro, 'trabajador');
-            $trabajador->setPassword($passwordCodificado);
+            //$passwordEnClaro = 'trabajador'.$i;
+            //$encoder = $this->container->get('security.encoder_factory')->getEncoder($trabajador);
+            //$passwordCodificado = $encoder->encodePassword($passwordEnClaro, 'trabajador');
+            //$trabajador->setPassword($passwordCodificado);
+            $trabajador->setPassword('trabajador'.$i);
 
             $ciudad = $ciudades[array_rand($ciudades)];
-            $trabajador->setLocalidad($this->getDireccion($ciudad));
-            //$trabajador->setLocalidad($ciudad);
+            //$trabajador->setLocalidad($this->getDireccion($ciudad));
+            $trabajador->setLocalidad($ciudad);
 
             // El 60% de los trabajadors permite email
             $trabajador->setNumEmpleado(substr(rand(), 0, 6));

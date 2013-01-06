@@ -1,6 +1,6 @@
 <?php
-// src/Planilla/ContratoBundle/DataFixtures/ORM/Categorias.php
-namespace Planilla\ContratoBundle\DataFixtures\ORM;
+// src/Cupon/ContratoBundle/DataFixtures/ORM/Categorias.php
+namespace Cupon\ContratoBundle\DataFixtures\ORM;
 
 use Doctrine\Common\DataFixtures\AbstractFixture;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
